@@ -1,0 +1,13 @@
+#!/bin/bash
+
+P1=$1
+P2=$2
+P3=$3
+P4=$4
+P5=$5
+
+echo "$P1:: Hi $P2, $P3, $P4, $P5"
+echo "$P2:: hello $P1"
+echo "$P3:: Its been good to see you $P1"
+echo "$P4:: All of us were settled in good positions where $P3 stays in Hyderabad"
+echo "$P5:: All the best $P1 $P2 $P3 $P4"
