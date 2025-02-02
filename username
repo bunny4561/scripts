@@ -1,5 +1,5 @@
 #!/bin/bash
 
 echo "Enter your username::"
-read -s USERNAME
+read USERNAME
 echo "Entered username is :: $USERNAME"
