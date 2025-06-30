@@ -1,7 +1,7 @@
 #! /bin/bash
 
 USERID=$(id -u)
-if [ $USERID -ne o ]
+if [ $USERID -ne 0 ]
 then
     echo "User who executed script is not root user, to execute script must be root user"
     exit 1
