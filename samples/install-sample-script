@@ -1,0 +1,38 @@
+#! /bin/bash
+
+USERID=$(id -u)
+if [ $USERID -ne 0 ]
+then 
+    echo "Entered user is not root user , run script with root user"
+    exit 1
+fi
+
+dnf list installed mysql
+if [ $? -ne 0 ]
+then 
+    dnf install mysql -y
+    if [ $? -ne 0 ]
+    then
+        echo "MySQL installation failed"
+        exit 1
+    else
+        echo "MySQL installation success"
+    fi
+else
+    echo "MySQL is already installed"
+fi
+    
+dnf list installed git
+if [ $? -ne 0 ]
+then
+    dnf install git
+    if [ $? -ne 0 ]
+    then
+        echo "Git installation failed"
+        exit 1
+    else
+        echo "Git installation success"
+    fi
+else
+    echo "Git is already installed"
+fi
