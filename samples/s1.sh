@@ -9,4 +9,4 @@ TIMESTAMP=$(date)
 
 echo "Script executed at $TIMESTAMP"
 
-echo "The sum of two values are::$SUM"
+echo "The sum of $NUM and $NUM2 values are::$SUM"
