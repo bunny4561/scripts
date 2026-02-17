@@ -11,4 +11,5 @@ else
         echo "Entered number $NUM is equals to 100"
     else
     echo " Entered number $NUM is less than or equals to 100"
+    fi
 fi
