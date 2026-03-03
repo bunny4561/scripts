@@ -7,13 +7,17 @@ then
     exit 1
 fi
 
+R="\e[31m"
+G="\e[32m"
+Y="\e[33m"
+
 VALIDATE()
 {
     if [ $1 -ne 0 ]
     then
-        echo "$2 failed:exiting script"
+        echo -e "$2 $R failed:exiting script"
     else
-        echo "$2 success"
+        echo -e "$2 $G success"
     fi
 }
 
@@ -23,7 +27,7 @@ then
     dnf install mysql -y
     VALIDATE $? "MySQL installation"
 else
-    echo "MySQl is already installed"
+    echo -e "MySQl is already $Y installed"
 fi
 
 dnf list installed git
@@ -32,5 +36,5 @@ then
     dnf install git -y
     VALIDATE $? "Git installation"
 else
-    echo "Git is already installed"
+    echo -e "Git is already $Y installed"
 fi
