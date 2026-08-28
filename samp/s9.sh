@@ -11,7 +11,7 @@ fi
 dnf list installed mysql
 if [ $? -ne 0 ]
 then 
-    dnf install msql
+    dnf install mysql
     if [ $? -ne 0 ]
     then 
         echo "Installing script failed :: exiting script"

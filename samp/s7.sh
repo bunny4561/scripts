@@ -9,3 +9,5 @@ echo "Third movie is ${MOVIES[2]}"
 echo "Third movie is ${MOVIES[2]}"
 echo "Third movie is ${MOVIES[2]}"
 echo "All movie together are ${MOVIES[@]}"
+
+
