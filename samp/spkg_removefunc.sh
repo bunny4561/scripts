@@ -22,7 +22,7 @@ if [ $? -ne 0 ]
 then 
     echo "Mysql is not installed in server"
 else 
-    dnf remove mysql
+    dnf remove mysql -y
     VALIDATE $? "Uninstalling Mysql"
 fi
 
@@ -31,6 +31,6 @@ if [ $? -ne 0 ]
 then 
     echo "Git is not installed in server"
 else 
-    dnf remove git
+    dnf remove git -y
     VALIDATE $? "Uninstalling Git"
 fi
