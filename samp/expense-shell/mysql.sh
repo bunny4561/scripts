@@ -40,7 +40,7 @@ VALIDATE $? "Enabling mysqld service"
 systemctl start mysqld &>>$LOG_FILE_NAME
 VALIDATE $? "Starting mysqld service"
 
-mysql -h 172.31.20.69 -u root -pExpenseApp@1 -e 'show databases; &>>$LOG_FILE_NAME
+mysql -h 172.31.20.69 -u root -pExpenseApp@1 -e 'show databases;' &>>$LOG_FILE_NAME
 
 if [ $? -ne 0 ]
 then
