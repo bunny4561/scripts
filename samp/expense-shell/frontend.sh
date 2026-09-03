@@ -27,9 +27,11 @@ CHECK_ROOT() {
 
 CHECK_ROOT
 
+mkdir -p $LOGS_FOLDER
+
 echo "Script executed at $TIMESTAMP" &>>$LOG_FILE_NAME
 
-mkdir -p $LOGS_FOLDER
+
 
 dnf install nginx -y &>>$LOG_FILE_NAME
 VALIDATE $? "Istalling nginx"
