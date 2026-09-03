@@ -38,7 +38,7 @@ VALIDATE $? "Enabling mysqld service"
 systemctl start mysqld
 VALIDATE $? "Starting mysqld service"
 
-mysql -h mysql.daws82s.online -u root -pExpenseApp@1 -e 'show databases;
+mysql -h 172.31.20.69 -u root -pExpenseApp@1 -e 'show databases;
 
 if [ $? -ne 0 ]
 then
